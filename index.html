@@ -34,7 +34,7 @@
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Novus Spoofer</h1>
 	                        <p class="hero-paragraph">The #1 leading HWID Spoofer on the market.</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="#">Preorder now</a><a class="button" href="https://spoofer.lol/discord">Join The Discord</a></div>
+	                        <div class="hero-cta"><a class="button button-primary"  onclick="scrollFunction1()">Preorder now</a><a class="button" href="https://spoofer.lol/discord">Join The Discord</a></div>
 						</div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
@@ -99,7 +99,7 @@
                             <p class="section-paragraph mb-0">Novus Spoofer is 100% Safe, Fast, Easy, and Effective to use. You will be supprised how flawless it works. </p>
                         </div>
 						<div class="pricing-tables-wrap">
-                            <div class="pricing-table">
+                            <div id="el1" class="pricing-table">
                                 <div class="pricing-table-inner is-revealing">
                                     <div class="pricing-table-main">
                                         <div class="pricing-table-header pb-24">
@@ -180,5 +180,16 @@
     </div>
 
     <script src="dist/js/main.min.js"></script>
+    
+	<script>
+      function scrollFunction1() {
+        let e = document.getElementById("el1");
+        e.scrollIntoView({
+          block: 'start',
+          behavior: 'smooth',
+          inline: 'start'
+        });
+    </script>
+	
 </body>
 </html>
