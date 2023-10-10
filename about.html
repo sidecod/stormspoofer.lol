@@ -10,6 +10,39 @@
     <link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+
+    <script src="dist/js/main.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+	
+	
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap">
@@ -26,17 +59,18 @@
                 </div>
             </div>
         </header>
-	    	<main>
+
+        <main>
             <section class="hero">
                 <div class="container">
                     <div class="hero-inner">
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Novus Spoofer In Acction</h1>
 	                        <p class="hero-paragraph">Preorder Novus Spoofer now.</p>
-				<div class="hero-cta"><a class="button button-primary" href="https://spoofer.lol/#price">Preorder now</a></div>
-					</div>
-			<div class="hero-figure anime-element">
-				<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
+	                        <div class="hero-cta"><a class="button button-primary" href="https://spoofer.lol/#price">Preorder now</a>
+						</div>
+						<div class="hero-figure anime-element">
+							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
 								<rect width="528" height="396" style="fill:transparent;" />
 							</svg>
 							<div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
@@ -49,10 +83,11 @@
 							<div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
 							<div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
 							<div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
-			</div>
+						</div>
                     </div>
                 </div>
             </section>
+
             <section class="features section">
                 <div class="container">
 					<div class="features-inner section-inner has-bottom-divider">
@@ -77,7 +112,7 @@
                                     <p class="text-sm mb-0"> In this scenario, we introduce David, a passionate online activist who dedicates his efforts to advocating for human rights in an oppressive authoritarian regime. David's work is not without its challenges; the government closely monitors and censors internet activity, particularly targeting activists like him. </p>
                                     <p class="text-sm mb-0"> Undeterred by the risks, David employs a sophisticated hardware ID spoofer to safeguard his identity. By skillfully disguising his hardware ID, he gains the ability to access websites that are otherwise blocked by the regime's strict censorship policies. This allows him to connect with fellow activists and share critical information with the world while remaining invisible to the prying eyes of government surveillance. </p>
 				    <p class="text-sm mb-0"> David's strategic use of the hardware ID spoofer serves as a lifeline for his mission, allowing him to operate clandestinely and continue his advocacy work in the face of formidable opposition. </p>
-				</div>
+                                </div>
                             </div>
                             <div class="feature text-center is-revealing">
                                 <div class="feature-inner">
@@ -88,25 +123,27 @@
                                     <p class="text-sm mb-0"> In this scenario, we meet Maria, a meticulous internet user who highly values her privacy. Like many, she's grown increasingly frustrated with the pervasive tracking of her online behavior by advertising companies and websites. Her online experience has become inundated with invasive ads and persistent trackers that follow her every move. </p>
                                     <p class="text-sm mb-0"> In response, Maria decides to take control of her digital presence by employing a state-of-the-art hardware ID spoofer. By concealing her actual hardware ID, she can surf the web without being incessantly bombarded by intrusive advertisements and trackers. This allows Maria to maintain a more private, ad-free online experience, free from the prying eyes of data-hungry corporations. </p>
 				    <p class="text-sm mb-0"> In this scenario, Maria's utilization of the hardware ID spoofer empowers her to reclaim her online privacy and curate her internet experience on her own terms, demonstrating how this technology can put control back in the hands of individuals. </p>
-				</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
 			<section class="cta section">
 				<div class="container">
 					<div class="cta-inner section-inner">
 						<h3 class="section-title mt-0">So what are you waiting for!</h3>
 						<p> Get the true anonymity you need now! </p>
 						<div class="cta-cta">
-							<a class="button button-primary button-wide-mobile" href="https://spoofer.lol/#price">Preorder Now</a>
+							<a class="button button-primary button-wide-mobile" href="https://spoofer.lol/about">Preorder Now</a>
 						</div>
 					</div>
 				</div>
 			</section>
         </main>
-	<footer class="site-footer">
+
+        <footer class="site-footer">
             <div class="container">
                 <div class="site-footer-inner">
                     <div class="brand footer-brand">
@@ -121,7 +158,7 @@
                         <li>
                             <a href="https://spoofer.lol/discord">Novus Support</a>
                         </li>
-	                <li>
+                       <li>
                             <a href="https://spoofer.lol/about">About Novus Spoofer</a>
                         </li>
                     </ul>
@@ -140,5 +177,5 @@
             </div>
         </footer>
     </div>
-    </body>
+</body>
 </html>
