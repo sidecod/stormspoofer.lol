@@ -33,7 +33,7 @@
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Novus Spoofer</h1>
 	                        <p class="hero-paragraph">The #1 leading HWID Spoofer on the market.</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="#price">Preorder now!</a><a class="button" href="https://spoofer.lol/discord">Join The Discord</a></div>
+	                        <div class="hero-cta"><a class="button button-primary" href="#price">Purchase now!</a><a class="button" href="https://spoofer.lol/discord">Join The Discord</a></div>
 						</div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
@@ -103,16 +103,15 @@
                         <div class="pricing-header text-center">
                             <h2 class="section-title mt-0" id="price">Security is our #1 priority.</h2>
                             <p class="section-paragraph mb-0">Novus Spoofer is 100% Safe, Fast, Easy, and Effective to use. You will be surprised how flawless it works. </p>
-			    <div class="hero-cta mt-4"><a class="button button-primary" onclick="myFunction1()" herf="javascript:void(0);">Switch to yearly</a></div>
 			            </div>
 						<div class="pricing-tables-wrap" >
                             <div class="pricing-table">
                                 <div class="pricing-table-inner is-revealing">
                                     <div class="pricing-table-main">
                                         <div class="pricing-table-header pb-24">
-                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span id="change" class="pricing-table-price-amount h1">20</span><span id="plan" class="text-xs">/Month</span></div>
+                                            <div class="pricing-table-price text-center"><span class="pricing-table-price-currency h2">$</span><span id="change" class="pricing-table-price-amount h1">20</span><span id="plan" class="text-xs">/Month</span></div>
 					                    </div>
-										<div class="pricing-table-features-title text-xs pt-24 pb-24">What will I get?</div>
+										<div class="pricing-table-features-title text-primary pt-24 pb-24 text-center">What will I get?</div>
                                         <ul class="pricing-table-features list-reset text-xs">
                                             <li>
                                                 <span>Accsess to Novus HWID Spoofer</span>
@@ -123,47 +122,16 @@
                                             <li>
                                                 <span>VIP Discord Access/Roles</span>
                                             </li>
-					    <li>
-						<span>Free Spoofer Updates</span>
-					    </li>
+					                        <li>
+						                        <span>Free Spoofer Updates</span>
+					                        </li>
                                         </ul>
                                     </div>
                                     <div class="pricing-table-cta mb-8">
-                                        <a class="button button-primary button-shadow button-block" href="#top">Coming Soon!</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-		<div class="container-sm">
-                    <div class="pricing-inner section-inner">
-                        <div class="pricing-header text-center">
-						<div class="pricing-tables-wrap" >
-                            <div class="pricing-table">
-                                <div class="pricing-table-inner is-revealing">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header pb-24">
-                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span class="pricing-table-price-amount h1">90</span><span class="text-xs">/Lifetime</span></div>
-					                    </div>
-										<div class="pricing-table-features-title text-xs pt-24 pb-24">What will I get?</div>
-                                        <ul class="pricing-table-features list-reset text-xs">
-                                            <li>
-                                                <span>Accsess to Novus HWID Spoofer</span>
-                                            </li>
-                                            <li>
-                                                <span>Unlimited Temporary Spoofing</span>
-                                            </li>
-                                            <li>
-                                                <span>VIP Discord Access/Roles</span>
-                                            </li>
-					    <li>
-						<span>Free Spoofer Updates</span>
-					    </li>
-                                        </ul>
+                                        <a class="button button-primary button-shadow button-block" href="#top">Purchase</a>
                                     </div>
                                     <div class="pricing-table-cta mb-8">
-                                        <a class="button button-primary button-shadow button-block" href="#top">Coming Soon!</a>
+                                        <div><a class="button button-primary button-shadow button-block" onclick="myFunction1()" id="txt">Switch to yearly</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +143,7 @@
 				<div class="container">
 					<div class="cta-inner section-inner">
 						<h3 class="section-title mt-0">Still not convinced on buying?</h3>
-						<p> Read ways that this will help you in a real-world situation. </p>
+						<p> Read ways that Novus would help you in a real-world situation. </p>
 						<div class="cta-cta">
 							<a class="button button-primary button-wide-mobile" href="https://spoofer.lol/about">Read Now</a>
 						</div>
@@ -221,34 +189,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
 $(document).ready(function(){
-  // Add smooth scrolling to all links
   $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-      // Prevent default anchor click behavior
       event.preventDefault();
-
-      // Store hash
       var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+    }
   });
 });
 </script>
 <script>
 function myFunction1() {
   var x = document.getElementById("change");
-  var y = document.getElementById("plan")
+  var y = document.getElementById("plan");
+  var z = document.getElementById("txt");
   if (x.innerHTML === "20") {
     x.innerHTML = "90";
   }
@@ -262,6 +220,14 @@ if (y.innerHTML === "/Month") {
    else {
     y.innerHTML = "/Month";
   }
+
+  if (z.innerHTML === "switch to Monthly") {
+    z.innerHTML = "Switch to Yearly";
+  } 
+   else {
+    z.innerHTML = "switch to Monthly";
+  }
 }
+</script>
 </body>
 </html>
