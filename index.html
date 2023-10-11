@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
+<head> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,39 +10,6 @@
     <link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-
-    <script src="dist/js/main.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-	
-	
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap">
@@ -59,7 +26,6 @@ $(document).ready(function(){
                 </div>
             </div>
         </header>
-
         <main>
             <section class="hero">
                 <div class="container">
@@ -87,7 +53,6 @@ $(document).ready(function(){
                     </div>
                 </div>
             </section>
-
             <section class="features section">
                 <div class="container">
 					<div class="features-inner section-inner has-bottom-divider">
@@ -123,21 +88,20 @@ $(document).ready(function(){
                     </div>
                 </div>
             </section>
-
             <section class="pricing section">
                 <div class="container-sm">
                     <div class="pricing-inner section-inner">
                         <div class="pricing-header text-center">
                             <h2 class="section-title mt-0" id="price">Security is our #1 priority.</h2>
                             <p class="section-paragraph mb-0">Novus Spoofer is 100% Safe, Fast, Easy, and Effective to use. You will be surprised how flawless it works. </p>
-			</div>
+			            </div>
 						<div class="pricing-tables-wrap" >
                             <div class="pricing-table">
                                 <div class="pricing-table-inner is-revealing">
                                     <div class="pricing-table-main">
                                         <div class="pricing-table-header pb-24">
                                             <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span class="pricing-table-price-amount h1">60</span><span class="text-xs">/Lifetime</span></div>
-					</div>
+					                    </div>
 										<div class="pricing-table-features-title text-xs pt-24 pb-24">What you will get</div>
                                         <ul class="pricing-table-features list-reset text-xs">
                                             <li>
@@ -149,9 +113,9 @@ $(document).ready(function(){
                                             <li>
                                                 <span>VIP Discord Access/Roles</span>
                                             </li>
-					    <li>
-						<span>Free Spoofer Updates</span>
-					    </li>
+					                        <li>
+						                    <span>Free Spoofer Updates</span>
+					                        </li>
                                         </ul>
                                     </div>
                                     <div class="pricing-table-cta mb-8">
@@ -163,7 +127,6 @@ $(document).ready(function(){
                     </div>
                 </div>
             </section>
-
 			<section class="cta section">
 				<div class="container">
 					<div class="cta-inner section-inner">
@@ -176,7 +139,6 @@ $(document).ready(function(){
 				</div>
 			</section>
         </main>
-
         <footer class="site-footer">
             <div class="container">
                 <div class="site-footer-inner">
@@ -211,5 +173,33 @@ $(document).ready(function(){
             </div>
         </footer>
     </div>
+    <script src="dist/js/main.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>	
 </body>
 </html>
