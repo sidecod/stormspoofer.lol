@@ -109,7 +109,7 @@
                                 <div class="pricing-table-inner is-revealing">
                                     <div class="pricing-table-main">
                                         <div class="pricing-table-header pb-24">
-                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span class="pricing-table-price-amount h1">20</span><span class="text-xs">/Month</span></div>
+                                            <div class="pricing-table-price"><span class="pricing-table-price-currency h2">$</span><span id="#change" class="pricing-table-price-amount h1">20</span><span id="#plan" class="text-xs">/Month</span></div>
 					                    </div>
 										<div class="pricing-table-features-title text-xs pt-24 pb-24">What will I get?</div>
                                         <ul class="pricing-table-features list-reset text-xs">
@@ -174,7 +174,7 @@
 				<div class="container">
 					<div class="cta-inner section-inner">
 						<h3 class="section-title mt-0">Still not convinced on buying?</h3>
-						<p> Read ways that this will help you in a real world situation. </p>
+						<p> Read ways that this will help you in a real-world situation. </p>
 						<div class="cta-cta">
 							<a class="button button-primary button-wide-mobile" href="https://spoofer.lol/about">Read Now</a>
 						</div>
@@ -243,6 +243,26 @@ $(document).ready(function(){
     } // End if
   });
 });
-</script>	
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("change");
+  if (x.innerHTML === "20") {
+    x.innerHTML = "90";
+  } else {
+    x.innerHTML = "20";
+  }
+}
+</script>
+<script>
+function myFunction() {
+  var y = document.getElementById("plan");
+  if (y.innerHTML === "/Month") {
+    y.innerHTML = "/Year";
+  } else {
+    y.innerHTML = "/Month";
+  }
+}
+</script>
 </body>
 </html>
