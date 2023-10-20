@@ -122,7 +122,7 @@
                                                 <span>Accsess to Novus HWID Spoofer</span>
                                             </li>
                                             <li>
-                                                <span>Unlimited Temporary Spoofing</span>
+                                                <span id="un">Unlimited Temporary Spoofing</span>
                                             </li>
                                             <li>
                                                 <span>VIP Discord Access/Roles</span>
@@ -209,9 +209,17 @@ $(document).ready(function(){
 </script>
 <script>
 function myFunction1() {
+  var w = document.getElementById("un");
   var x = document.getElementById("change");
   var y = document.getElementById("plan");
   var z = document.getElementById("txt");
+  if(w.innerHTML === "Temporary Spoofing")
+  {
+	  w.innerHTML ="Unlimited Temporary Spoofing";
+  }
+  else {
+	w.innerHTML = "Temporary Spoofing";
+  }
   if (x.innerHTML === "20") {
     x.innerHTML = "90";
   }
