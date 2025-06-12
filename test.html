@@ -1,91 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HWID Spoofer (Educational)</title>
-    <!-- Open Graph meta tags (adjusted for educational context) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="HWID Spoofer (Educational Project)" />
-    <meta property="og:description" content="An educational project exploring HWID spoofing concepts." />
-    <meta property="og:url" content="https://your-educational-project-url.xyz" />
-    <meta property="og:image" content="https://placehold.co/1200x630/282828/AAAAAA?text=Educational+Project" />
-    <link id="top" rel="shortcut icon" type="image/png" href="https://placehold.co/32x32/282828/AAAAAA?text=EP"/>
-
-    <!-- Tailwind CSS CDN -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HWID Spoofer (Educational) - Modern Overview</title>
+    <!-- Tailwind CSS CDN for easy styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom font for a clean look */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-        /* Base styles from the original request: background 10,10,10, foreground 75,75,75 */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: rgb(10, 10, 10); /* Main background */
-            color: rgb(75, 75, 75); /* Default text/foreground color */
-            min-height: 100vh;
+            /* Background color: RGB(10, 10, 10) */
+            background-color: rgb(10, 10, 10);
+            /* Foreground/text color: RGB(75, 75, 75) */
+            color: rgb(75, 75, 75);
+            min-height: 100vh; /* Ensure body takes full viewport height */
             display: flex;
-            flex-direction: column; /* Allow content to stack vertically */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem; /* Add overall padding */
         }
-
-        /* Re-usable container for consistent width */
-        .container-main {
-            max-width: 1280px; /* Equivalent to container in many frameworks */
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-
-        /* Card styling (similar to previous version, slightly adapted) */
+        /* Styling for the main content card with subtle glow/shadow */
         .card {
-            background-color: rgb(20, 20, 20);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(40, 40, 40, 0.6);
+            background-color: rgb(20, 20, 20); /* Slightly lighter background for the card */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.3); /* Deeper, modern shadow */
+            border: 1px solid rgba(40, 40, 40, 0.6); /* Subtle border for definition */
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         .card:hover {
             transform: translateY(-3px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        /* Button styling for a modern look */
-        .btn-primary {
-            background-image: linear-gradient(to right, rgb(50, 50, 50) 0%, rgb(35, 35, 35) 100%);
-            border: none;
-            color: rgb(200, 200, 200);
-            padding: 0.8rem 2rem;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 0.75rem; /* Tailwind's rounded-xl */
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        .btn-primary:hover {
-            background-image: linear-gradient(to right, rgb(60, 60, 60) 0%, rgb(45, 45, 45) 100%);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            transform: translateY(-1px);
-        }
-        .btn-primary:active {
-            transform: translateY(1px);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Secondary button for contrast */
-        .btn-secondary {
-            background-color: transparent;
-            border: 1px solid rgb(75, 75, 75);
-            color: rgb(150, 150, 150);
-        }
-        .btn-secondary:hover {
-            background-color: rgba(75, 75, 75, 0.1);
-            border-color: rgb(100, 100, 100);
-            color: rgb(180, 180, 180);
         }
 
         /* Custom scrollbar for a cleaner look */
@@ -103,284 +48,123 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgb(65, 65, 65);
         }
+
+        /* Button styling for a modern look */
+        .btn-modern {
+            background-image: linear-gradient(to right, rgb(50, 50, 50) 0%, rgb(35, 35, 35) 100%);
+            border: none;
+            color: rgb(200, 200, 200);
+            padding: 0.8rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 0.75rem; /* Tailwind's rounded-xl */
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .btn-modern:hover {
+            background-image: linear-gradient(to right, rgb(60, 60, 60) 0%, rgb(45, 45, 45) 100%);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transform: translateY(-1px);
+        }
+        .btn-modern:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body class="p-4">
-    <div class="body-wrap flex flex-col min-h-screen">
-        <header class="site-header py-6">
-            <div class="container-main">
-                <div class="site-header-inner flex justify-between items-center">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="#top" class="flex items-center space-x-2 text-white text-2xl sm:text-3xl font-extrabold tracking-tight">
-                                <!-- Placeholder for logo -->
-                                <span class="bg-gray-800 p-2 rounded-full inline-block">👨‍🎓</span>
-                                <span>HWID Spoofer <span class="font-light text-gray-500 text-base sm:text-lg">(Educational)</span></span>
-                            </a>
-                        </h1>
-                    </div>
-                    <nav class="site-nav">
-                        <ul class="flex space-x-6">
-                            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-200">About Project</a></li>
-                            <li><a href="#concepts" class="text-gray-400 hover:text-white transition-colors duration-200">Concepts</a></li>
-                            <li><a href="#simulated-tiers" class="text-gray-400 hover:text-white transition-colors duration-200">Simulated Tiers</a></li>
-                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    <div class="card p-8 sm:p-10 md:p-12 lg:p-16 rounded-2xl w-full max-w-4xl mx-auto flex flex-col items-center text-center">
+        <!-- Title Section -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-white leading-tight tracking-wider">
+            HWID Spoofer
+            <span class="block text-xl sm:text-2xl md:text-3xl font-light text-gray-500 mt-2">
+                Educational Project Overview
+            </span>
+        </h1>
+
+        <!-- Disclaimer Section -->
+        <p class="text-sm sm:text-base mb-8 max-w-2xl text-gray-400 font-medium leading-relaxed">
+            <span class="font-semibold text-red-500">Important Disclaimer:</span> This project is developed purely for educational purposes,
+            aiming to provide insight into system identification and hardware virtualization techniques. It is strictly not intended for any
+            malicious activities, circumventing software restrictions, or violating terms of service. Users are solely responsible for
+            their actions and full adherence to all applicable laws and regulations.
+        </p>
+
+        <!-- What is HWID Spoofing? -->
+        <div class="mb-10 text-left w-full max-w-2xl">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-5 text-gray-300 border-b border-gray-700 pb-2">What is Hardware ID (HWID) Spoofing?</h2>
+            <p class="mb-4 text-gray-500 leading-relaxed text-md">
+                Hardware ID (HWID) refers to a unique identifier generated from a computer's core hardware components,
+                such as the motherboard's serial number, CPU details, hard drive volume IDs, and network adapter MAC addresses.
+                Sophisticated software applications frequently leverage these HWIDs for various purposes, including
+                software licensing, digital rights management, and tracking installations to prevent unauthorized usage.
+            </p>
+            <p class="text-gray-500 leading-relaxed text-md">
+                HWID spoofing is a theoretical and practical technique designed to modify or obfuscate this distinct
+                hardware signature. By doing so, the underlying system can be made to appear as a different or "new"
+                machine to software relying on HWID for identification. This educational project delves into the
+                fundamental principles of how such hardware identifiers are formulated and conceptually illustrates
+                methods through which they might be altered at a system level for academic exploration and understanding.
+            </p>
+        </div>
+
+        <!-- Key Concepts Explored -->
+        <div class="mb-10 text-left w-full max-w-2xl">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-5 text-gray-300 border-b border-gray-700 pb-2">Key Educational Concepts Explored:</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-500">
+                <li class="flex items-start space-x-3 bg-gray-900/20 p-4 rounded-lg shadow-inner">
+                    <span class="text-blue-400 text-xl">&#x2022;</span> <!-- Modern bullet icon -->
+                    <p class="leading-relaxed"><span class="font-medium text-gray-400">System Identification:</span> Deeper insights into how operating systems and applications precisely identify and enumerate hardware components.</p>
+                </li>
+                <li class="flex items-start space-x-3 bg-gray-900/20 p-4 rounded-lg shadow-inner">
+                    <span class="text-blue-400 text-xl">&#x2022;</span>
+                    <p class="leading-relaxed"><span class="font-medium text-gray-400">Registry & OS Internals:</span> A detailed examination of how specific identifiers are stored, retrieved, and manipulated within system registries and other OS data structures.</p>
+                </li>
+                <li class="flex items-start space-x-3 bg-gray-900/20 p-4 rounded-lg shadow-inner">
+                    <span class="text-blue-400 text-xl">&#x2022;</span>
+                    <p class="leading-relaxed"><span class="font-medium text-gray-400">Driver & Firmware Interaction:</span> Investigating the critical role of device drivers and even firmware in reporting accurate hardware information to the operating system.</p>
+                </li>
+                <li class="flex items-start space-x-3 bg-gray-900/20 p-4 rounded-lg shadow-inner">
+                    <span class="text-blue-400 text-xl">&#x2022;</span>
+                    <p class="leading-relaxed"><span class="font-medium text-gray-400">Security & Privacy Implications:</span> Comprehensive discussion on the ethical considerations, privacy implications, and role of persistent hardware identifiers in digital forensics.</p>
+                </li>
+                <li class="flex items-start space-x-3 bg-gray-900/20 p-4 rounded-lg shadow-inner">
+                    <span class="text-blue-400 text-xl">&#x2022;</span>
+                    <p class="leading-relaxed"><span class="font-medium text-gray-400">Virtualization & Abstraction:</span> Understanding how virtual machine environments abstract underlying hardware and present simulated or different identifiers to guest operating systems.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Call to Action / Further Study -->
+        <div class="w-full max-w-2xl text-left">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-5 text-gray-300 border-b border-gray-700 pb-2">Purpose and Further Study:</h2>
+            <p class="mb-6 text-gray-500 leading-relaxed text-md">
+                This project's core objective is to provide a foundational understanding of hardware identification
+                and the theoretical underpinnings of spoofing techniques. It is intended as a valuable academic
+                resource for students and researchers keen on delving into operating system internals, low-level
+                programming, reverse engineering methodologies, and foundational cybersecurity principles. Any
+                accompanying code would be illustrative and designed for pedagogical purposes, strictly
+                discouraging any unethical or non-compliant usage.
+            </p>
+            <p class="mb-8 text-gray-500 leading-relaxed text-md">
+                For those seeking more profound knowledge, we highly recommend exploring detailed documentation
+                on Windows Registry structure, WMI (Windows Management Instrumentation) APIs, various methods
+                of hardware enumeration across different operating systems (e.g., Linux's `/sys` filesystem),
+                and concepts like device virtualization in hypervisors.
+            </p>
+            <div class="text-center">
+                <button class="btn-modern">Explore Research & Documentation</button>
             </div>
-        </header>
-
-        <main class="flex-grow">
-            <!-- Hero Section -->
-            <section id="hero" class="hero py-20 md:py-32 text-center">
-                <div class="container-main card p-8 rounded-2xl">
-                    <div class="hero-inner max-w-3xl mx-auto">
-                        <div class="hero-copy">
-                            <h1 class="hero-title mt-0 text-white text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tighter mb-4">
-                                HWID Spoofer <span class="block text-blue-400 text-3xl sm:text-4xl md:text-5xl font-light mt-2">(Educational Project)</span>
-                            </h1>
-                            <p class="hero-paragraph text-gray-400 text-lg sm:text-xl mb-8">
-                                An in-depth academic exploration into Hardware ID (HWID) generation and conceptual spoofing techniques for research and understanding.
-                            </p>
-                            <div class="hero-cta flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                                <a class="btn-primary" href="#concepts">Explore Concepts</a>
-                                <a class="btn-primary btn-secondary" href="#contact">Join Discussion (Discord)</a>
-                            </div>
-                        </div>
-                        <!-- Simplified Hero Figure Placeholder -->
-                        <div class="hero-figure mt-16 max-w-xl mx-auto bg-gray-900 rounded-xl p-8 shadow-inner border border-gray-700">
-                            <p class="text-gray-500 text-sm">
-                                <span class="text-white font-bold">Code Snippet Placeholder:</span>
-                                <br>
-                                <code class="block text-left whitespace-pre-wrap mt-2 text-xs md:text-sm bg-gray-800 p-3 rounded-md overflow-auto">
-                                    // Illustrative pseudocode for hardware ID retrieval<br>
-                                    function getHardwareID() {<br>
-                                    &nbsp;&nbsp;const cpuInfo = readCPUInfo();<br>
-                                    &nbsp;&nbsp;const diskSerial = getDiskSerialNumber();<br>
-                                    &nbsp;&nbsp;const macAddress = getNetworkMAC();<br>
-                                    &nbsp;&nbsp;return hash([cpuInfo, diskSerial, macAddress]);<br>
-                                    }<br>
-                                    // Educational context: understanding system fingerprints
-                                </code>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Disclaimer Section (Moved up for prominence) -->
-            <section id="disclaimer" class="py-12 bg-gray-900 text-center">
-                <div class="container-main">
-                    <p class="text-red-400 font-semibold text-lg max-w-4xl mx-auto leading-relaxed">
-                        Important Disclaimer: This project is developed purely for educational and research purposes, to understand system identification and hardware virtualization techniques. It is strictly not intended for any malicious activities, bypassing software restrictions, or violating terms of service. Users are solely responsible for their actions and full adherence to all applicable laws and regulations.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Features Section (Key Concepts) -->
-            <section id="concepts" class="features section py-20">
-                <div class="container-main">
-                    <div class="features-inner section-inner">
-                        <h2 class="section-title mt-0 text-white text-4xl font-bold mb-10 text-center border-b border-gray-700 pb-4">Key Educational Concepts Explored</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div class="feature card p-6 rounded-xl text-center">
-                                <div class="feature-inner">
-                                    <div class="feature-icon mb-4">
-                                        <!-- Placeholder for icon -->
-                                        <span class="text-blue-400 text-4xl">💻</span>
-                                    </div>
-                                    <h4 class="feature-title mt-4 text-gray-300 text-xl font-semibold mb-2">System Identification</h4>
-                                    <p class="text-sm mb-0 text-gray-500 leading-relaxed">Deeper insights into how operating systems and applications precisely identify and enumerate hardware components.</p>
-                                </div>
-                            </div>
-                            <div class="feature card p-6 rounded-xl text-center">
-                                <div class="feature-inner">
-                                    <div class="feature-icon mb-4">
-                                        <span class="text-blue-400 text-4xl">📁</span>
-                                    </div>
-                                    <h4 class="feature-title mt-4 text-gray-300 text-xl font-semibold mb-2">Registry & OS Internals</h4>
-                                    <p class="text-sm mb-0 text-gray-500 leading-relaxed">A detailed examination of how specific identifiers are stored, retrieved, and manipulated within system registries and other OS data structures.</p>
-                                </div>
-                            </div>
-                            <div class="feature card p-6 rounded-xl text-center">
-                                <div class="feature-inner">
-                                    <div class="feature-icon mb-4">
-                                        <span class="text-blue-400 text-4xl">⚙️</span>
-                                    </div>
-                                    <h4 class="feature-title mt-4 text-gray-300 text-xl font-semibold mb-2">Driver & Firmware Interaction</h4>
-                                    <p class="text-sm mb-0 text-gray-500 leading-relaxed">Investigating the critical role of device drivers and even firmware in reporting accurate hardware information to the operating system.</p>
-                                </div>
-                            </div>
-                            <div class="feature card p-6 rounded-xl text-center">
-                                <div class="feature-inner">
-                                    <div class="feature-icon mb-4">
-                                        <span class="text-blue-400 text-4xl">🔒</span>
-                                    </div>
-                                    <h4 class="feature-title mt-4 text-gray-300 text-xl font-semibold mb-2">Security & Privacy</h4>
-                                    <p class="text-sm mb-0 text-gray-500 leading-relaxed">Comprehensive discussion on the ethical considerations, privacy implications, and role of persistent hardware identifiers in digital forensics.</p>
-                                </div>
-                            </div>
-                            <div class="feature card p-6 rounded-xl text-center">
-                                <div class="feature-inner">
-                                    <div class="feature-icon mb-4">
-                                        <span class="text-blue-400 text-4xl">🌐</span>
-                                    </div>
-                                    <h4 class="feature-title mt-4 text-gray-300 text-xl font-semibold mb-2">Virtualization & Abstraction</h4>
-                                    <p class="text-sm mb-0 text-gray-500 leading-relaxed">Understanding how virtual machine environments abstract underlying hardware and present simulated or different identifiers to guest operating systems.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Pricing Section (Re-purposed as Simulated Access Tiers) -->
-            <section id="simulated-tiers" class="pricing section py-20 bg-gray-900">
-                <div class="container-main max-w-2xl mx-auto">
-                    <div class="pricing-inner section-inner text-center">
-                        <h2 class="section-title mt-0 text-white text-4xl font-bold mb-4">Simulated Project Access Tiers</h2>
-                        <p class="section-paragraph mb-8 text-gray-400 leading-relaxed">
-                            For educational demonstration purposes, this section illustrates different hypothetical access models for the project's conceptual components.
-                        </p>
-
-                        <div class="pricing-tables-wrap flex justify-center">
-                            <div class="pricing-table card p-8 rounded-2xl w-full max-w-sm">
-                                <div class="pricing-table-inner">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header pb-6 border-b border-gray-700 mb-6">
-                                            <div class="pricing-table-price text-center text-white">
-                                                <span class="pricing-table-price-currency text-3xl align-top">$</span>
-                                                <span id="change" class="pricing-table-price-amount text-6xl font-extrabold">15</span>
-                                                <span id="plan" class="text-lg text-gray-500 align-bottom">/Day (Simulated)</span>
-                                            </div>
-                                        </div>
-                                        <div class="pricing-table-features-title text-blue-400 pt-4 pb-4 text-center text-lg font-semibold">Features Include:</div>
-                                        <ul class="pricing-table-features list-none text-sm text-gray-400 space-y-3 mb-8">
-                                            <li class="flex items-center justify-center space-x-2">
-                                                <span class="text-green-400">&#10003;</span>
-                                                <span>Access to HWID Spoofer Conceptual Model</span>
-                                            </li>
-                                            <li class="flex items-center justify-center space-x-2">
-                                                <span class="text-green-400">&#10003;</span>
-                                                <span id="un">24h Simulated Module Access</span>
-                                            </li>
-                                            <li class="flex items-center justify-center space-x-2">
-                                                <span class="text-green-400">&#10003;</span>
-                                                <span>Community Discord Access/Roles</span>
-                                            </li>
-                                            <li class="flex items-center justify-center space-x-2">
-                                                <span class="text-green-400">&#10003;</span>
-                                                <span>Simulated Future Project Updates</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta mb-4">
-                                        <a class="btn-primary w-full block text-center py-3" href="#simulated-purchase">View Details</a>
-                                    </div>
-                                    <div class="pricing-table-cta">
-                                        <button class="btn-primary btn-secondary w-full block text-center py-3" onclick="myFunction1()" id="txt">Switch to Yearly (Simulated)</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section id="contact" class="cta section py-20 text-center">
-                <div class="container-main max-w-2xl mx-auto card p-8 rounded-2xl">
-                    <div class="cta-inner section-inner">
-                        <h3 class="section-title mt-0 text-white text-3xl sm:text-4xl font-bold mb-4">
-                            Want to learn more or contribute?
-                        </h3>
-                        <p class="text-gray-400 text-lg mb-8">
-                            Dive deeper into the research, understand the methodologies, or join our community discussion.
-                        </p>
-                        <div class="cta-cta flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                            <a class="btn-primary" href="https://discord.com/invite/your-educational-discord" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
-                            <a class="btn-primary btn-secondary" href="https://github.com/your-educational-repo" target="_blank" rel="noopener noreferrer">View Project Code (GitHub)</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+        </div>
 
         <!-- Footer -->
-        <footer class="site-footer py-8">
-            <div class="container-main">
-                <div class="site-footer-inner flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
-                    <div class="brand footer-brand">
-                        <a href="#top" class="flex items-center space-x-2 text-white text-xl font-bold">
-                            <span class="bg-gray-800 p-2 rounded-full inline-block">👨‍🎓</span>
-                            <span>Educational Project</span>
-                        </a>
-                    </div>
-                    <ul class="footer-links list-none flex flex-wrap justify-center space-x-6 text-gray-500">
-                        <li><a href="#about" class="hover:text-white transition-colors duration-200">About</a></li>
-                        <li><a href="#concepts" class="hover:text-white transition-colors duration-200">Concepts</a></li>
-                        <li><a href="#simulated-tiers" class="hover:text-white transition-colors duration-200">Simulated Tiers</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors duration-200">Contact</a></li>
-                    </ul>
-                    <ul class="footer-social-links list-none flex space-x-4 text-gray-500">
-                        <li>
-                            <a href="#" aria-label="Twitter" class="hover:text-white transition-colors duration-200">
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                    <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <!-- Add other social links as needed -->
-                    </ul>
-                    <div class="footer-copyright text-sm text-gray-600">&copy; 2025 Educational Project, all rights reserved.</div>
-                </div>
-            </div>
-        </footer>
+        <div class="mt-12 pt-8 border-t border-gray-700 w-full max-w-2xl">
+            <p class="text-sm text-gray-600 font-light">&copy; 2025 Educational Project. All rights reserved.</p>
+        </div>
     </div>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Function to toggle simulated pricing and text
-        function myFunction1() {
-            var accessType = document.getElementById("un");
-            var priceAmount = document.getElementById("change");
-            var pricePlan = document.getElementById("plan");
-            var switchButton = document.getElementById("txt");
-
-            if (accessType.innerHTML === "24h Simulated Module Access") {
-                accessType.innerHTML = "Unlimited Simulated Module Access";
-            } else {
-                accessType.innerHTML = "24h Simulated Module Access";
-            }
-
-            if (priceAmount.innerHTML === "15") {
-                priceAmount.innerHTML = "90";
-            } else {
-                priceAmount.innerHTML = "15";
-            }
-
-            if (pricePlan.innerHTML === "/Day (Simulated)") {
-                pricePlan.innerHTML = "/Year (Simulated)";
-            } else {
-                pricePlan.innerHTML = "/Day (Simulated)";
-            }
-
-            if (switchButton.innerHTML === "Switch to Yearly (Simulated)") {
-                switchButton.innerHTML = "Switch to Daily (Simulated)";
-            } else {
-                switchButton.innerHTML = "Switch to Yearly (Simulated)";
-            }
-        }
-    </script>
 </body>
 </html>
