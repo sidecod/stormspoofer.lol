@@ -143,7 +143,7 @@
 
         /* Styles for the main header navigation on mobile */
         .site-nav {
-            /* Mobile styles - fixed position, off-screen by default */
+            /* Mobile styles */
             position: fixed;
             top: 0;
             right: -100%; /* Start off-screen */
@@ -151,15 +151,16 @@
             height: 100vh;
             background-color: rgb(15, 15, 15); /* Dark background for mobile menu */
             z-index: 999; /* High z-index to overlay content */
-            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            transition: right 0.3s ease-in-out; /* Smooth slide-in/out */
+            transition: right 0.3s ease-in-out;
+            display: none; /* Hide by default on mobile */
         }
 
         .site-nav.active {
             right: 0; /* Slide into view */
+            display: flex; /* Display as flex when active */
         }
 
         .site-nav ul {
