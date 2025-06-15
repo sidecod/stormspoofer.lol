@@ -184,10 +184,12 @@
         }
 
         .site-nav ul li a {
-            display: block; /* Make links block level for better click area */
+            display: flex; /* Change to flex */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically if needed */
             padding: 0.6rem 0.75rem; /* Padding for each menu item, slightly adjusted */
             border-radius: 0.5rem;
-            text-align: center; /* Center text */
+            /* text-align: center; /* Removed as flex handles centering */
             white-space: nowrap; /* Prevent wrapping */
             border: 1px solid rgba(75, 75, 75, 0.3); /* Small border */
             transition: background-color 0.2s ease, border-color 0.2s ease;
