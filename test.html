@@ -141,46 +141,83 @@
             fill: currentColor; /* Inherit color from parent */
         }
 
-        /* Styles for the main header navigation on mobile */
+        /* Styles for the main header navigation on mobile (pop-up bubble) */
         .site-nav {
-            /* Mobile styles */
-            position: fixed;
-            top: 0;
-            right: -100%; /* Start off-screen */
-            width: 100%;
-            height: 100vh;
-            background-color: rgb(15, 15, 15); /* Dark background for mobile menu */
-            z-index: 999; /* High z-index to overlay content */
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: right 0.3s ease-in-out;
-            display: none; /* Hide by default on mobile */
+            position: absolute; /* Position relative to .site-header-inner */
+            top: 100%; /* Directly below the .site-header-inner */
+            right: 0; /* Aligned to the right of .site-header-inner */
+            width: 220px; /* Fixed width for the bubble menu */
+            background-color: rgb(20, 20, 20); /* Match card-like background */
+            border: 1px solid rgba(40, 40, 40, 0.6);
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Smaller shadow for a pop-up */
+            z-index: 998; /* Below mobile button, above main content */
+            padding: 1rem; /* Padding inside the bubble */
+            opacity: 0;
+            visibility: hidden; /* Hide completely when not active */
+            transform: translateY(-10px) scale(0.9); /* Start slightly above and smaller */
+            transform-origin: top right; /* Scale from top right corner */
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out; /* Smooth transition */
+            display: block; /* Default to block for proper flow when visible */
         }
 
         .site-nav.active {
-            right: 0; /* Slide into view */
-            display: flex; /* Display as flex when active */
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
         }
 
+        /* Adjust ul within site-nav for mobile */
         .site-nav ul {
-            flex-direction: column; /* Stack links vertically on mobile */
-            gap: 1.5rem; /* Space between links */
+            flex-direction: column; /* Stack links vertically */
+            width: 100%; /* Take full width of the bubble */
+            gap: 0.5rem; /* Closer spacing for menu items */
         }
 
-        /* Desktop styles for main header navigation */
+        .site-nav ul li {
+            width: 100%; /* Make list items take full width */
+        }
+
+        .site-nav ul li a {
+            display: block; /* Make links block level for better click area */
+            padding: 0.5rem 0.75rem; /* Padding for each menu item */
+            border-radius: 0.5rem;
+            text-align: left; /* Align text left */
+            white-space: nowrap; /* Prevent wrapping */
+        }
+        .site-nav ul li a:hover {
+            background-color: rgb(30, 30, 30); /* Hover background for menu items */
+        }
+
+        /* Desktop styles for main header navigation (override mobile styles) */
         @media (min-width: 768px) { /* md breakpoint */
             .site-nav {
                 position: static; /* Revert to static positioning */
                 width: auto;
                 height: auto;
-                background-color: transparent; /* No background */
+                max-height: none;
+                overflow-y: visible;
+                background-color: transparent;
+                border: none;
+                box-shadow: none;
                 z-index: auto;
                 display: block; /* Revert to display block for normal flow */
+                padding: 0; /* Remove mobile padding */
+                opacity: 1; /* Always visible on desktop */
+                visibility: visible; /* Always visible on desktop */
+                transform: none; /* No transform on desktop */
+                transition: none; /* No transition on desktop */
             }
             .site-nav ul {
                 flex-direction: row; /* Horizontal links on desktop */
                 gap: 1.5rem; /* Revert space-x-6 */
+            }
+            .site-nav ul li a {
+                padding: 0; /* Remove mobile padding for links */
+                text-align: center; /* Revert text alignment */
+            }
+            .site-nav ul li a:hover {
+                background-color: transparent; /* No background hover on desktop */
             }
         }
 
@@ -210,7 +247,7 @@
     <div class="body-wrap flex flex-col min-h-screen animate-fade-in">
         <header class="site-header py-6">
             <div class="container-main">
-                <div class="site-header-inner flex justify-between items-center">
+                <div class="site-header-inner flex justify-between items-center relative"> <!-- Added relative here for positioning context -->
                     <div class="brand header-brand">
                         <h1 class="m-0">
                             <a href="#top" class="flex items-center space-x-2 text-white text-2xl sm:text-3xl font-extrabold tracking-tight">
@@ -219,17 +256,19 @@
                             </a>
                         </h1>
                     </div>
-                    <nav class="site-nav hidden md:block">
-                        <ul class="flex space-x-6">
-                            <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-200">Features</a></li>
-                            <li><a href="#price" class="text-gray-400 hover:text-white transition-colors duration-200">Pricing</a></li>
-                            <li><a href="#cta" class="text-gray-400 hover:text-white transition-colors duration-200">About</a></li>
-                            <li><a href="https://discord.com/invite/your-discord" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-200">Discord</a></li>
-                        </ul>
-                    </nav>
+                    <!-- Mobile Menu Button (Hamburger) -->
                     <button id="mobile-menu-button" class="md:hidden text-gray-400 hover:text-white z-50">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
+                    <!-- Main Header Navigation -->
+                    <nav id="main-header-nav" class="site-nav">
+                        <ul class="flex space-x-6 md:space-x-6">
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-200 text-lg">Features</a></li>
+                            <li><a href="#price" class="text-gray-400 hover:text-white transition-colors duration-200 text-lg">Pricing</a></li>
+                            <li><a href="#cta" class="text-gray-400 hover:text-white transition-colors duration-200 text-lg">About</a></li>
+                            <li><a href="https://discord.com/invite/your-discord" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-200 text-lg">Discord</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
