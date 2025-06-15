@@ -187,21 +187,18 @@
         .site-nav ul li {
             width: 100%; /* Make list items take full width */
             margin-bottom: 0.5rem; /* Small gap between selections */
-            display: flex; /* Use flexbox to center the link within the list item */
-            justify-content: center; /* Center the link horizontally */
+            /* Removed flex and justify-content from here as it's now on the <a> */
         }
         .site-nav ul li:last-child {
             margin-bottom: 0; /* No margin on the last item */
         }
 
         .site-nav ul li a {
-            display: flex; /* Change to flex */
-            justify-content: center; /* Center content horizontally within the button */
-            align-items: center; /* Center content vertically if needed */
+            display: block; /* Make the anchor a block-level element */
             width: 100%; /* Force link to take full width of its list item for consistent button size */
             padding: 0.6rem 0.75rem; /* Padding for each menu item, slightly adjusted */
             border-radius: 0.5rem;
-            text-align: center; /* Fallback for text alignment */
+            text-align: center; /* Center the text content within the block */
             white-space: nowrap; /* Prevent wrapping */
             border: 1px solid rgba(75, 75, 75, 0.3); /* Small border */
             transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -237,7 +234,7 @@
             }
             .site-nav ul li {
                 margin-bottom: 0; /* Remove mobile margin */
-                justify-content: flex-start; /* Revert to default alignment on desktop */
+                /* Removed justify-content: flex-start here as it's not needed for block elements */
             }
             .site-nav ul li a {
                 padding: 0; /* Remove mobile padding for links */
