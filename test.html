@@ -174,10 +174,11 @@
 
         /* Adjust ul within site-nav for mobile */
         .site-nav ul {
+            display: flex; /* Use flexbox for direct centering of li items */
             flex-direction: column; /* Stack links vertically */
             width: 100%; /* Take full width of the bubble */
+            align-items: center; /* Center li items horizontally */
             gap: 0; /* Remove default gap as links will have margin-bottom */
-            align-items: center; /* Center items horizontally within the flex container */
             padding: 0; /* Ensure no default padding on ul */
             margin: 0; /* Ensure no default margin on ul */
             list-style: none; /* Remove list bullet points */
@@ -186,6 +187,8 @@
         .site-nav ul li {
             width: 100%; /* Make list items take full width */
             margin-bottom: 0.5rem; /* Small gap between selections */
+            display: flex; /* Use flexbox to center the link within the list item */
+            justify-content: center; /* Center the link horizontally */
         }
         .site-nav ul li:last-child {
             margin-bottom: 0; /* No margin on the last item */
@@ -193,8 +196,9 @@
 
         .site-nav ul li a {
             display: flex; /* Change to flex */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically if needed */
+            justify-content: center; /* Center content horizontally within the button */
+            align-items: center; /* Center content vertically if needed */
+            width: 100%; /* Force link to take full width of its list item for consistent button size */
             padding: 0.6rem 0.75rem; /* Padding for each menu item, slightly adjusted */
             border-radius: 0.5rem;
             text-align: center; /* Fallback for text alignment */
@@ -233,6 +237,7 @@
             }
             .site-nav ul li {
                 margin-bottom: 0; /* Remove mobile margin */
+                justify-content: flex-start; /* Revert to default alignment on desktop */
             }
             .site-nav ul li a {
                 padding: 0; /* Remove mobile padding for links */
