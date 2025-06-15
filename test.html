@@ -171,22 +171,30 @@
         .site-nav ul {
             flex-direction: column; /* Stack links vertically */
             width: 100%; /* Take full width of the bubble */
-            gap: 0.5rem; /* Closer spacing for menu items */
+            gap: 0; /* Remove default gap as links will have margin-bottom */
+            align-items: center; /* Center items horizontally within the flex container */
         }
 
         .site-nav ul li {
             width: 100%; /* Make list items take full width */
+            margin-bottom: 0.5rem; /* Small gap between selections */
+        }
+        .site-nav ul li:last-child {
+            margin-bottom: 0; /* No margin on the last item */
         }
 
         .site-nav ul li a {
             display: block; /* Make links block level for better click area */
-            padding: 0.5rem 0.75rem; /* Padding for each menu item */
+            padding: 0.6rem 0.75rem; /* Padding for each menu item, slightly adjusted */
             border-radius: 0.5rem;
-            text-align: left; /* Align text left */
+            text-align: center; /* Center text */
             white-space: nowrap; /* Prevent wrapping */
+            border: 1px solid rgba(75, 75, 75, 0.3); /* Small border */
+            transition: background-color 0.2s ease, border-color 0.2s ease;
         }
         .site-nav ul li a:hover {
             background-color: rgb(30, 30, 30); /* Hover background for menu items */
+            border-color: rgb(100, 100, 100);
         }
 
         /* Desktop styles for main header navigation (override mobile styles) */
@@ -211,10 +219,15 @@
             .site-nav ul {
                 flex-direction: row; /* Horizontal links on desktop */
                 gap: 1.5rem; /* Revert space-x-6 */
+                align-items: center; /* Ensure alignment */
+            }
+            .site-nav ul li {
+                margin-bottom: 0; /* Remove mobile margin */
             }
             .site-nav ul li a {
                 padding: 0; /* Remove mobile padding for links */
                 text-align: center; /* Revert text alignment */
+                border: none; /* Remove border on desktop */
             }
             .site-nav ul li a:hover {
                 background-color: transparent; /* No background hover on desktop */
