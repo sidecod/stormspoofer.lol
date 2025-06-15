@@ -479,6 +479,14 @@
                 }
             });
         });
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mainHeaderNav = document.getElementById('main-header-nav');
+
+        if (mobileMenuButton && mainHeaderNav) {
+            mobileMenuButton.addEventListener('click', () => {
+                mainHeaderNav.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 </html>
